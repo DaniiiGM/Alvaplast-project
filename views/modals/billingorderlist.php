@@ -23,28 +23,23 @@
             </tr>
         </thead>
         <tbody>
+        <?php
+            require_once('../../Models/Facturacion.php');
+            $factura = Facturacion::getListarFacturacion();
+            foreach($factura as $factu){
+           ?>
             <tr>
-                <td>DOC-001</td>
-                <td>OV-12345</td>
-                <td>Empresa A</td>
-                <td>12345678-9</td>
-                <td>Juan Pérez</td>
-                <td>2023-12-01</td>
-                <td>1500.00</td>
-                <td>Dólares</td>
-                <td>En proceso</td>
+                <td><?=$factu->NROFACT?></td>
+                <td><?=$factu->id_venta.$factu->serieventa?></td>
+                <td><?=$factu->razon_social?></td>
+                <td><?=$factu->ruc?></td>
+                <td><?=$factu->id_personal?></td>
+                <td><?=explode(' ',$factu->fecha_movimiento)[0]?></td>
+                <td><?=$factu->Sub_Total?></td>
+                <td><?=$factu->id_moneda?></td>
+                <td><?=$factu->estado?></td>
             </tr>
-            <tr>
-                <td>DOC-002</td>
-                <td>OV-54321</td>
-                <td>Empresa B</td>
-                <td>98765432-1</td>
-                <td>Maria González</td>
-                <td>2023-11-25</td>
-                <td>2800.00</td>
-                <td>Euros</td>
-                <td>Completado</td>
-            </tr>
+            <?php }?>
         </tbody>
     </table>
 </div>
