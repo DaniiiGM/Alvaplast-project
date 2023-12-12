@@ -16,36 +16,22 @@
             </tr>
         </thead>
         <tbody>
-        <thead>
-    <tr>
-        <th>Código</th>
-        <th>Razón Social</th>
-        <th>RUC</th>
-        <th>DNI</th>
-        <th>Dirección</th>
-        <th>Teléfono</th>
-    </tr>
-</thead>
-<tbody>
-    <?php
-
-    require_once('../../Models/Cliente.php');
-
-    $clientes = Cliente::getClientes();
-
-    foreach ($clientes as $cliente) {
-    ?>
-        <tr>
-            <td><?= $cliente->codigo ?></td>
-            <td><?= $cliente->razon_social ?></td>
-            <td><?= $cliente->ruc ?></td>
-            <td><?= $cliente->dni ?></td>
-            <td><?= $cliente->direccion ?></td>
-            <td><?= $cliente->telefono ?></td>
-        </tr>
-    <?php
-    }
-    ?> 
+            <tr>
+                <td>Código 001</td>
+                <td>Razón Social A</td>
+                <td>RUC 12345678901</td>
+                <td>DNI 12345678</td>
+                <td>Dirección 123, Ciudad</td>
+                <td>Teléfono 123456789</td>
+            </tr>
+            <tr>
+                <td>Código 002</td>
+                <td>Razón Social B</td>
+                <td>RUC 98765432109</td>
+                <td>DNI 87654321</td>
+                <td>Dirección 456, Otra Ciudad</td>
+                <td>Teléfono 987654321</td>
+            </tr>
         </tbody>
     </table>
 </div>
