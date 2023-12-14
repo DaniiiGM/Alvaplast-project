@@ -37,8 +37,7 @@
                     <td><?=explode(' ',$factus->fecha_movimiento)[0]?></td>
                     <td><?=$factus->pago_inicial?></td>
                     <td><?=$factus->moneda?></td>
-                    <td><?=$factus->estado?></td>
-                    <td><?=($factus->estado== "P") ? "Pagado" : "Dueda"?></td> 
+                    <td><?=($factus->estado== "E") ? "Deuda" : "Emitido"?></td> 
                 </tr>
                 <?php }?>
             <tr>
